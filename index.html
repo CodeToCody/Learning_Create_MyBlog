@@ -1,108 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+        <link rel="icon" type="image/png" sizes="64x64" href="./assets/images/c.png"> <!-- 這是網頁的小logo(在視窗上面那個) -->
 
-<head>
-    <!-- 設定文件編碼為 UTF-8 -->
-    <meta charset="UTF-8">
-    <!-- 設定相容性，使用最新的 IE 引擎 -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 設定視窗寬度和縮放 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 頁面標題 -->
-    <title>NewsFlash | Home</title>
+        <!--   Remix icon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- 網站圖示（顯示在網址列左邊的小圖示） -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/c.png">
-    <!-- 引入 Remix 圖示庫的樣式 -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- 引入 Swiper.js 樣式 -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
-    <!-- 引入自定義樣式 -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+        <!-- swiper.js styles-->
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
+        <!-- Your custom css file -->
+        <link rel="stylesheet" href="./assets/css/main.css">
 
-<body>
-    <!-- 頁面頭部 -->
-    <header class="header" id="header">
-        <!-- 導航欄 -->
-        <nav class="navbar container">
+    </head>
+    <body>
+        <!-- brief input: header.header#header -->
+        <header class="header" id="header">
+            <!-- nav.navbar.container -->
+            <!-- limit how width a particular elements can stretch-->
+            <nav class="navbar container">
 
-            <!-- 網站標誌和連結 -->
-            <a href="./index.html">
-                <h2 class="logo"> NewsFlash </h2>
-            </a>
-
-            <!-- 選單區塊 -->
-            <div class="menu" id="menu">
-                <!-- 選單列表 -->
-                <ul class="list">
-                    <li class="list-item current">
-                        <a href=".#">首頁</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">分類</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">評論</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">新聞</a>
-                    </li>
-                    <li class="list-item">
-                        <a href="#">會員</a>
-                    </li>
-                    <li class="list-item screen-lg-hidden">
-                        <a href="#">登入</a>
-                    </li>
-                    <li class="list-item screen-lg-hidden">
-                        <a href="#">註冊</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- 右側附加功能 -->
-            <div class="list list-right">
-                <!-- 切換主題按鈕 -->
-                <button class="btn place-items-center" id="theme-toggle-btn">
-                    <i class="ri-sun-line sun-icon"></i>
-                    <i class="ri-moon-line moon-icon"></i>
-                </button>
-
-                <button class="btn place-items-center" id="search-icon">
-                    <i class="ri-search-line"></i>
-                </button>
-
-                <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
-                    <i class="ri-menu-3-line open-menu-icon"></i>
-                    <i class="ri-close-3-line close-menu-icon"></i>
-                </button>
-
-                <a href="#" class="list-link screen-sm-hidden">Sign in</a>
-                <a href="#" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
-                    <span>Sign in</span>
+                <a href="./index.html">
+                    <!-- 網站名稱 -->
+                    <h2 class="logo">Cody's Website</h2>
                 </a>
-            </div>
+                <!-- brief input: .menu#menu -->
+                <div class="menu" id="menu">
+                    <ul class="list">
+                        <li class="list-item">
+                            <a href="#" class="list-link current">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Categories</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Reviews</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">News</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Membership</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Contact</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link screen-lg-hidden">Sign in</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link screen-lg-hidden">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Button -->
+                <!-- .list.list-right-->
+                <div class="list list-right">
+                    <!-- button.btn.place-items-center#theme-toggle-btn -->
+                    <button class="btn place-items-center" id="theme-toggle-btn">
+                        <!-- i.ri-sun-line.sun-icon-->
+                        <i class="ri-sun-line sun-icon"></i>
+                        <i class="ri-moon-line moon-icon"></i>
+                    </button>
+                </div>
 
-        </nav>
-    </header>
-    <!-- 搜尋 -->
+            </nav>
 
-    <!-- 精選文章 -->
+        </header>
 
-    <!-- 快速閱讀 -->
 
-    <!-- 較早的文章 -->
 
-    <!-- 熱門標籤 -->
 
-    <!-- 最新消息訂閱 -->
 
-    <!-- 頁面底部 -->
 
-    <!-- 引入 Swiper.js 庫 -->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
-    <!-- 自定義腳本 -->
-    <script src="./assets/js/main.js"></script>
-</body>
 
+
+
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
