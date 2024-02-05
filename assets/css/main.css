@@ -114,7 +114,11 @@ body.light-theme{
     z-index:999;
 }
 
+/* navbar的位置很特別，是在 header 裡面(header去左邊去右邊的中間部分) */
+/* navbar's position is special,its in the header.
+    Header occupy the upper of the window,and nav is a rec in the middle of it (no space up and down)*/
 .navbar{
+    /* background-color: #505050; */
     display:flex;
     align-items:center;
     justify-content: space-between;
@@ -133,8 +137,8 @@ body.light-theme{
     width:23rem;
     padding:1.5rem;
     background-color: var(--secondary-background-color);
-    /* opacity:0;
-    transform:scale(0); */
+    opacity:0;
+    transform:scale(0);
     transition:opacity .25s ease-in;
 }
 
@@ -183,3 +187,92 @@ body.light-theme{
     display:block;
 }
 
+/* header 是上面有 cody's website 的那條*/
+/* 之後會用 javascript 在 header 中添加 activated 類別，這裡先定義 activated 的樣式，之後可利用 javascript 動態調用*/
+.header.activated{
+   box-shadow: 0 1px .5rem var(--transparent-light-color);
+}
+
+.menu.activated{
+    box-shadow: 1px 1px 1rem var(--transparent-light-color);
+    /* 1 means no transparent */
+    opacity:1;
+    /* scale the menu with ratio 1 (means no change) */
+    transform:scale(1);
+}
+
+.menu-toggle-icon.activated .open-menu-icon{
+    display: none;
+    
+}
+.menu-toggle-icon.activated .close-menu-icon{
+    display: block;
+    
+}
+/* Search */
+.search-form-container{
+    width:100%;
+    max-width: 100%;
+    height:100vh;
+    background-color: var(--primary-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    opacity: 0;
+    transform: scale(0);
+    transform: opacity .5s;
+}
+
+.form-container-inner{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap:var(--gap);
+    text-align: center;
+}
+
+.form{
+    display:flex;
+    justify-content: center;
+}
+
+.form-input,
+.form-btn{
+    display: inline-block;
+    border: 2px solid var(--secondary-background-color);
+    padding: 1.5rem;
+}
+
+.form-input{
+    border-right: none;
+    width: 100%;
+}
+
+
+.form-btn{
+    margin-left: -.5rem;
+    border-left: none;
+    background-color: var(--secondary-background-color);
+    width: 8rem;
+}
+
+.form-note{
+    font-size: var(--font-size-xsm);
+    align-self: flex-end;
+}
+
+.form-close-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border: 2px solid var(--secondary-background-color);
+    width: 4rem;
+    height: 4rem;
+}
+/* Fro Js styles */
+.search-form-container.activated{
+    opacity: 1;
+    transform: scale(1);
+}
